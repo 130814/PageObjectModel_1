@@ -11,6 +11,11 @@ public class TestSuit extends BaseTest {
     CompareProductList compareProductList = new CompareProductList();
     CommunityPoll communityPoll = new CommunityPoll();
     AddtoCartAndEmail addtoCartAndEmail = new AddtoCartAndEmail();
+    CurrencyConverter currencyConverter = new CurrencyConverter();
+    SearchNike searchNike = new SearchNike();
+    nopCommerceNewRelease nopCommerceNewRelease = new nopCommerceNewRelease();
+    BuildyourownComputer buildyourownComputer = new BuildyourownComputer();
+
     @Test
     public void usershouldregistersuccesfullyornot() {
         homePage.clickOnregisterButton();
@@ -48,9 +53,33 @@ public class TestSuit extends BaseTest {
 
     @Test
     public void registerusershouldvoteSucessfully() {
-
         loginPage.enterLoginDetail();
         communityPoll.Usershouldsuccessfullyvote();
     }
+@Test
+public void printoutproducttitle(){
+        homePage.printoutproducttitle();
+}
+@Test
+    public void clickonsearch(){
+       homePage.SearchAlret();
+}
+@Test
+    public void CurrencyConverterverify(){
+        currencyConverter.UserVeifyCurrencyAccordingly();
+}
+@Test
+    public void ClickonSearch(){
+        searchNike.UserSearchNike();
+}
+@Test
+    public void usershouldsucessfullyComment(){
+        nopCommerceNewRelease.usershouldsucessfullyComment();
+}
+@Test
+
+    public void SucesssfullyBuyProduct(){
+        buildyourownComputer.UsershoouldCheckoutSucessfullyforproduct();
+}
 
 }

@@ -1,6 +1,7 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 
 import java.sql.Timestamp;
 
@@ -25,5 +26,21 @@ public class Utils extends BasePage {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         return timestamp.getTime();
     }
+    public static void selectoptionVisibletext(By by,String text){
+        Select select = new Select(driver.findElement(by));
+        select.selectByVisibleText(text);
+
+    }
+    public static void selectoptionvalue(By by, String Value){
+        Select select = new Select(driver.findElement(by));
+        select.selectByValue(Value);
+    }
+    public static void selectoptionIndex(By by,int index){
+        Select select = new Select(driver.findElement(by));
+        select.selectByIndex(index);
+
+    }
+
+
 }
 
